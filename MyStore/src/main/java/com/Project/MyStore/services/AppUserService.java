@@ -27,6 +27,6 @@ public class AppUserService implements UserDetailsService {
             return springUser;
         }
 
-        return null;
+        throw new UsernameNotFoundException("User not found with email: " + email);
     }
 }
